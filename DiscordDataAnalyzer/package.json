@@ -1,0 +1,16 @@
+{
+  "name": "premium-gate-come-idqzd",
+  "productName": "premium-gate-come-idqzd",
+  "description": "My Electron application description",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "brons",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "20.1.4"
+  }
+}
