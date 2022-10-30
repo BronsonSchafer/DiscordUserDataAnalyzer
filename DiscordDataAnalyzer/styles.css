@@ -1,3 +1,20 @@
 /* styles.css */
 
 /* Add styles here to customize the appearance of your app */
+body {
+    height: 70vh;
+    width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(
+        to right,
+        #7289da,
+        #99aab5
+    );
+}
+
+h1{
+    font-size: 1em
+}
