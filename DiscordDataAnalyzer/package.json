@@ -1,6 +1,6 @@
 {
-  "name": "premium-gate-come-idqzd",
-  "productName": "premium-gate-come-idqzd",
+  "name": "discorddataanalyzer",
+  "productName": "DiscordDataAnalyzer",
   "description": "My Electron application description",
   "keywords": [],
   "main": "./main.js",
@@ -9,8 +9,8 @@
   "scripts": {
     "start": "electron ."
   },
-  "dependencies": {},
   "devDependencies": {
-    "electron": "20.1.4"
-  }
+    "electron": "^20.1.4"
+  },
+  "license": "MIT"
 }

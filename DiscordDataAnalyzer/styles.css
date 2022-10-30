@@ -1,13 +1,18 @@
-/* styles.css */
+/* fonts  */
+@font-face{
+    src: url(fonts/static/OpenSans_Condensed/OpenSans_Condensed-Medium.ttf);
+    font-family: OpenSans;
+}
 
-/* Add styles here to customize the appearance of your app */
+
+/* styles.css */  
 body {
     height: 70vh;
-    width: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: #7289da; /* fall back if gradient does not load*/
     background: linear-gradient(
         to right,
         #7289da,
@@ -16,5 +21,11 @@ body {
 }
 
 h1{
+    font-family: "OpenSans", sans-serif;
+    font-size: 2em
+}
+
+h2{
+    font-family: "OpenSans";
     font-size: 1em
 }
