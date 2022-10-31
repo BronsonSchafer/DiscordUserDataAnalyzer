@@ -2,7 +2,8 @@ const electron = require('electron');
 const url = require('url')
 const path = require('path');
 
-const {app, BrowserWindow, Menu} = electron;
+const {app, BrowserWindow, dialog, Menu} = electron;
+const fs = require('fs');
 
 let mainWindow;
 
@@ -53,7 +54,11 @@ const mainMenuTemplate = [
         label: 'File',
         submenu:[
             {
-                label: 'Open File'
+                label: 'Open File',
+                accelerator: 'CMDOrCtrl+O',
+                click(){
+                    openFile();
+                }
             },
             {
                 label: 'Quit', 
@@ -104,4 +109,23 @@ if(process.env.NODE_ENV != 'productuion'){
         ]
     }
     );
+}
+
+// open file
+function openFile(){
+    // open files looking for any type
+    const {dialog} = require('electron');
+    const files = dialog.showOpenDialog(mainWindow, {
+        properties: ['openDirectory'],
+        filters: [
+            { name: 'Discord Package', extensions: ['*'] }
+          ]
+    });
+
+    // if no files 
+    if(!files) return;
+    console.log(files.toString());
+    const file = files[0];
+    const fileContent = fs.readFileSync(file).toString();
+    console.log(fileContent);
 }
