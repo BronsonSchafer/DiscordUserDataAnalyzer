@@ -1,3 +1,5 @@
+// run with `npm start`
+
 const electron = require('electron');
 const url = require('url')
 const path = require('path');
@@ -115,7 +117,7 @@ if(process.env.NODE_ENV != 'productuion'){
 function openFile(){
     // open files looking for any type
     const {dialog} = require('electron');
-    const files = dialog.showOpenDialog(mainWindow, {
+    const files = dialog.showOpenDialogSync(mainWindow, {
         properties: ['openDirectory'],
         filters: [
             { name: 'Discord Package', extensions: ['*'] }
@@ -125,7 +127,7 @@ function openFile(){
     // if no files 
     if(!files) return;
     console.log(files.toString());
-    const file = files[0];
-    const fileContent = fs.readFileSync(file).toString();
+
+    const fileContent = fs.readdirSync(files.toString());
     console.log(fileContent);
 }
