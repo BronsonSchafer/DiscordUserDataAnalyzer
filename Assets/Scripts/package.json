@@ -1,0 +1,14 @@
+{
+  "name": "discordstats",
+  "version": "1.0.0",
+  "description": "This program will look at discord data and display it in a nice way.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Bronson Schafer",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^21.2.0"
+  }
+}
