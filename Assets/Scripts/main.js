@@ -1,4 +1,5 @@
 // run with `npm start`
+var readActivity = require('./readActivity.js');
 
 const electron = require('electron');
 const url = require('url')
@@ -14,6 +15,7 @@ const openWindows = [];
 
 // Listen for app to be ready 
 app.on('ready', function(){
+    readActivity.readFile();
     // create new window 
     mainWindow = new BrowserWindow({});
     // load html into window 
