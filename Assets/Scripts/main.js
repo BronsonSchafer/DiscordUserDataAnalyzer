@@ -140,7 +140,6 @@ function openFile(){
     // if no files 
     if(!files) return;
     console.log(files.toString());
-
     const fileContent = fs.readdirSync(files.toString());
     console.log(fileContent);
 }

@@ -9,6 +9,7 @@
   "author": "Bronson Schafer",
   "license": "MIT",
   "dependencies": {
-    "electron": "^21.2.0"
+    "electron": "^21.2.0",
+    "xhr2": "^0.2.1"
   }
 }
